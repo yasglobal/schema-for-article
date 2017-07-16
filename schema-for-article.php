@@ -1,19 +1,37 @@
 <?php 
 
-/*
-Plugin Name: Schema for Article
-Plugin URI: https://wordpress.org/plugins/schema-for-article/
-Description: Schema for Article is simply the easiest solution to add valid schema.org as a JSON script in the head of blog posts or posts. The provided LD-JSON is validated from the google structured data.
-Version:     0.1
-Author:      Sami Ahmed Siddiqui
-Author URI: http://www.yasglobal.com/
-Text Domain: schema-for-article
-*/
+/**
+ * Plugin Name: Schema for Article
+ * Plugin URI: https://wordpress.org/plugins/schema-for-article/
+ * Description: Schema for Article is simply the easiest solution to add valid schema.org as a JSON script in the head of blog posts or posts. The provided LD-JSON is validated from the google structured data.
+ * Version: 0.2
+ * Donate link: https://www.paypal.me/yasglobal
+ * Author: Sami Ahmed Siddiqui
+ * Author URI: http://www.yasglobal.com/web-design-development/wordpress/schema-article/
+ * License: GPL v3
+ */
 
+/**
+ *  Schema for Article Plugin
+ *  Copyright (C) 2016, Sami Ahmed Siddiqui <sami@samisiddiqui.com>
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 function schema_article_settings_link($links) { 
-  $settings_link = '<a href="admin.php?page=schema-article-settings">Settings</a>'; 
-  array_unshift($links, $settings_link); 
-  return $links; 
+   $settings_link = '<a href="admin.php?page=schema-article-settings">Settings</a>'; 
+   array_unshift($links, $settings_link); 
+   return $links; 
 }
 
 function schema_article_menu() {
@@ -22,6 +40,7 @@ function schema_article_menu() {
 }
 
 function register_schema_article_settings() {
+   register_setting( 'schema-article-settings-group', 'schema_article_type' );
    register_setting( 'schema-article-settings-group', 'schema_article_org_name' );
    register_setting( 'schema-article-settings-group', 'schema_article_logo' );
    register_setting( 'schema-article-settings-group', 'schema_article_image' );
@@ -43,21 +62,29 @@ function schema_article_settings_page() {
    echo '<form method="post" action="options.php">';
    settings_fields( 'schema-article-settings-group' );
    do_settings_sections( 'schema-article-settings-group' );
+   $schema_article_type = esc_attr( get_option('schema_article_type') );
    $schema_name = esc_attr( get_option('schema_article_org_name') );
    $schema_activated = esc_attr( get_option('schema_article_activate') );
-   $schema_activated_value = "on";
    $schema_activated_checked = "";
    if(empty($schema_name)){
       $schema_name = get_bloginfo("name");
    }
    if($schema_activated == 'on'){
-      $schema_activated_value = "off";
       $schema_activated_checked = "checked";
    }
    ?>
    <table class="schema-admin-table">
    	<caption>Basic Setting</caption>
 	   <tr>
+      <th>Type: </th>
+      <td>
+         <select name="schema_article_type">
+            <option value="Article" <?php if ( $schema_article_type == "" || $schema_article_type != "NewsArticle" ) echo 'selected="selected"'; ?>>Article</option>
+            <option value="NewsArticle" <?php if ( $schema_article_type == "NewsArticle" ) echo 'selected="selected"'; ?> >NewsArticle</option>
+         </select>
+      </td>
+      </tr>
+      <tr>
          <th>headline :</th>
          <td><small>Default : post_title</small></td>
       </tr>
@@ -137,7 +164,7 @@ function schema_article_settings_page() {
 		<table class="schema-admin-table">
          <tbody>
             <tr>
-               <td><input type="checkbox" name="schema_article_activate" value="<?php echo $schema_activated_value; ?>" <?php echo $schema_activated_checked; ?> /><strong>Activate SCHEMA.ORG Article</strong></td>
+               <td><input type="checkbox" name="schema_article_activate" value="on" <?php echo $schema_activated_checked; ?> /><strong>Activate SCHEMA.ORG Article</strong></td>
             </tr>
          </tbody>
       </table>
@@ -153,17 +180,21 @@ function schema_article_add_json_markup(){
 	global $post;
    if ( esc_attr( get_option('schema_article_activate') ) == "on" ) {
       $schema_name = esc_attr( get_option('schema_article_org_name') );
+      $schema_article_type = esc_attr( get_option('schema_article_type') );
       $schema_logo = esc_attr( get_option('schema_article_logo') );
       $schema_image = esc_attr( get_option('schema_article_image') );
 		$images = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-		if(!isset($images) && empty($images)){
+		if( isset($images) && empty($images)){
          $images[0] = $schema_image;
+      }
+      if( $schema_article_type == "" ){
+         $schema_article_type = "Article";
       }
 		$excerpt = schema_article_escape_text_tags($post->post_excerpt);
 		$content = $excerpt === "" ? mb_substr( schema_article_escape_text_tags( $post->post_content ), 0, 110 ) : $excerpt;
 		$args = array(
 				"@context" => "http://schema.org",
-				"@type"    => "Article",
+				"@type"    => $schema_article_type,
 				"mainEntityOfPage" => array(
 					"@type" => "WebPage",
 					"@id"   => get_permalink( $post->ID )

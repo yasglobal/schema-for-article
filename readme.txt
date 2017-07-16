@@ -1,11 +1,12 @@
 ﻿=== SCHEMA for Article ===
 Contributors: sasiddiqui
+Donate link: https://www.paypal.me/yasglobal
 Tags: json-ld, markup, schema, rich snippets, structured data, SEO, schema.org, schema markup, JSON, google validated
-Requires at least: 3.5
-Tested up to: 4.4
-Stable tag: 0.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires at least: 4.0
+Tested up to: 4.7
+Stable tag: 0.2
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl.html
 
 SCHEMA for Article is simply the easiest solution to add valid schema.org as a JSON script in the head of blog posts or articles.
 
@@ -45,5 +46,10 @@ If you need to install this using FTP or SFTP, you should follow these steps:
 
 == Changelog ==
 
+= 0.2 =
+
+* Fixed Featured Image bug and add functionality to change the schema type.
+
 = 0.1 =
-*  This is a fully functional version based on the idea of minimum viable product.
+
+* This is a fully functional version based on the idea of minimum viable product.
