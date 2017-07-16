@@ -36,12 +36,13 @@ class Schema_For_Article {
       }
       $excerpt = Schema_For_Article::schema_article_escape_text_tags($post->post_excerpt);
       $content = $excerpt === "" ? mb_substr( Schema_For_Article::schema_article_escape_text_tags( $post->post_content ), 0, 110 ) : $excerpt;
+      $schema_post_id = site_url() . str_replace(site_url(), "",get_permalink($post->ID));
       $args = array(
         "@context" => "http://schema.org",
         "@type"    => $schema_article_type,
         "mainEntityOfPage" => array(
           "@type" => "WebPage",
-          "@id"   => get_permalink( $post->ID )
+          "@id"   => $schema_post_id
         ),
         "headline" => Schema_For_Article::schema_article_escape_text_tags( $post->post_title ),
         "image"    => array(
