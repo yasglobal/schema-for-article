@@ -1,11 +1,11 @@
 ﻿=== SCHEMA for Article ===
-Contributors: sasiddiqui
+Contributors: aliya-yasir, sasiddiqui, yasglobal
 Donate link: https://www.paypal.me/yasglobal
 Tags: json-ld, markup, schema, rich snippets, structured data, SEO, schema.org, schema markup, JSON, google validated
 Requires at least: 4.0
 Tested up to: 4.7
-Stable tag: 0.2
-License: GPLv3
+Stable tag: 0.3
+License: GPL v3
 License URI: http://www.gnu.org/licenses/gpl.html
 
 SCHEMA for Article is simply the easiest solution to add valid schema.org as a JSON script in the head of blog posts or articles.
@@ -31,12 +31,12 @@ If you need to install this using FTP or SFTP, you should follow these steps:
 3. That’s it.
 
 
-**Compatibility.** This version requires php 5.4 for some options of json_encode. If you encounter any problems with the plugin you should check your web hotel’s php version.
+**Compatibility.** This version requires php 5.4 for some options of json_encode. If you encounter any problems with the plugin you should check your web hotel's php version.
 
 == Frequently Asked Questions ==
 
 **Why should I install this plugin?**
-*** Installing this plugin is the easiest way to add structured data to your blog. The plugin automatically creates the JSON-LD according to Google’s specification. 
+*** Installing this plugin is the easiest way to add structured data to your blog. The plugin automatically creates the JSON-LD according to Google's specification. 
 
 **Does this plugin improve my SEO rankings?** 
 *** We cannot promise it - but installing this plugin is in any case a step in right direction.***
@@ -46,9 +46,13 @@ If you need to install this using FTP or SFTP, you should follow these steps:
 
 == Changelog ==
 
+= 0.3 =
+
+* Optimized the Queries and made the SCHEMA more flexible.
+
 = 0.2 =
 
-* Fixed Featured Image bug and add functionality to change the schema type.
+* Fixed Featured Image bug and add functionality to change the SCHEMA type.
 
 = 0.1 =
 
