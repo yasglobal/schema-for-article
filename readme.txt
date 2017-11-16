@@ -1,12 +1,12 @@
 ﻿=== SCHEMA for Article ===
-Contributors: aliya-yasir, sasiddiqui, yasglobal
+Contributors: aliya-yasir, sasiddiqui
 Donate link: https://www.paypal.me/yasglobal
 Tags: json-ld, markup, schema, rich snippets, structured data, SEO, schema.org, schema markup, JSON, google validated
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 4.9
 Stable tag: 0.3.1
-License: GPL v3
-License URI: http://www.gnu.org/licenses/gpl.html
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 SCHEMA for Article is simply the easiest solution to add valid schema.org as a JSON script in the head of blog posts or articles.
 
