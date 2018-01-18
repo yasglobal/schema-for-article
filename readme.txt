@@ -56,14 +56,14 @@ Bug reports for SCHEMA for Article are [welcomed on GitHub](https://github.com/y
 
 == Frequently Asked Questions ==
 
-**Why should I install this plugin?**
-***Installing this plugin is the easiest way to add structured data to your blog. The plugin automatically creates the JSON-LD according to Google's specification.***
+= Q. Why should I install this plugin? =
+A. Installing this plugin is the easiest way to add structured data to your blog. The plugin automatically creates the JSON-LD according to Google's specification.
 
-**Does this plugin improve my SEO rankings?**
-***We cannot promise it - but installing this plugin is in any case a step in right direction.***
+= Q. Does this plugin improve my SEO rankings? =
+A. We cannot promise it - but installing this plugin is in any case a step in right direction.
 
-**Does image necessarily to be provided to activate the plugin?**
-***Yes, Incase the fearuted image is not provided by the author so, the defualt provided image would be use to validate the google structure data.***
+= Q. Does image necessarily to be provided to activate the plugin? =
+A. Yes, Incase the fearuted image is not provided by the author so, the defualt provided image would be use to validate the google structure data.
 
 == Changelog ==
 
