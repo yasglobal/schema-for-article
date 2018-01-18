@@ -38,20 +38,20 @@ Bug reports for SCHEMA for Article are [welcomed on GitHub](https://github.com/y
 
 This process defines you the steps to follow either you are installing through WordPress or Manually from FTP.
 
-=== From within WordPress ===
+**From within WordPress**
 
 1. Visit 'Plugins > Add New'
 2. Search for SCHEMA for Article
 3. Activate SCHEMA for Article from your Plugins page.
 4. Go to "after activation" below.
 
-=== Manually ===
+**Manually**
 
 1. Upload the `schema-for-article` folder to the `/wp-content/plugins/` directory
 2. Activate SCHEMA for Article through the 'Plugins' menu in WordPress
 3. Go to "after activation" below.
 
-=== After activation ===
+**After activation**
 
 1. Go to the plugin settings page and set up the plugin for your site.
 2. You're done!
