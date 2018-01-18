@@ -10,18 +10,34 @@ This plugin helps:
 * Does not depend on other plugins or external code.
 * Is simple to install: plug-and-play, no need to configure anything.
 
+### Compatibility
+This version requires php 5.4 for some options of json_encode. If you encounter any problems with the plugin you should check your web hotel's php version.
+
+### Thanks for the Support
+
+The support from the users that love SCHEMA for Article is huge. You can support SCHEMA for Article future development and help to make it even better by donating or even giving a 5 star rating with a nice message to me :)
+
+[Donate to SCHEMA for Article](https://www.paypal.me/yasglobal)
+
 ## Installation
 
-The easiest way to install the plugin is to use the WP built-in menu for finding and installing new plugins directly from the WordPress repositories.
+### From within WordPress
 
-If you need to install this using FTP or SFTP, you should follow these steps:
+1. Visit 'Plugins > Add New'
+2. Search for SCHEMA for Article
+3. Activate SCHEMA for Article from your Plugins page.
+4. Go to "after activation" below.
 
-1. Upload `json-ld-article.php` to the `/wp-content/plugins/` directory using your favorite FTP client.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. That's it.
+### Manually
 
+1. Upload the `schema-for-article` folder to the `/wp-content/plugins/` directory
+2. Activate SCHEMA for Article through the 'Plugins' menu in WordPress
+3. Go to "after activation" below.
 
-**Compatibility.** This version requires php 5.4 for some options of json_encode. If you encounter any problems with the plugin you should check your web hotel's php version.
+### After activation
+
+1. Go to the plugin settings page and set up the plugin for your site.
+2. You're done!
 
 ## Frequently Asked Questions
 
