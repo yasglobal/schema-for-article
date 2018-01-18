@@ -1,16 +1,18 @@
 ﻿=== SCHEMA for Article ===
-Contributors: aliya-yasir, sasiddiqui
+Contributors: sasiddiqui, aliya-yasir
 Donate link: https://www.paypal.me/yasglobal
 Tags: json-ld, markup, schema, rich snippets, structured data, SEO, schema.org, schema markup, JSON, google validated
 Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 0.3.1
+Stable tag: 0.3.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Requires PHP: 5.2
 
 SCHEMA for Article is simply the easiest solution to add valid schema.org as a JSON script in the head of blog posts or articles.
 
 == Description ==
+
 Search engines such as Google are using structured data markup in many ways—for example, to create rich snippets in search results. Search results with rich snippets will improve your click through rates and increase the number of visitors on your website.
 
 This plugin helps:
@@ -19,19 +21,38 @@ This plugin helps:
 * Does not depend on other plugins or external code.
 * Is simple to install: plug-and-play, no need to configure anything.
 
+=== Compatibility ===
+This version requires php 5.4 for some options of json_encode. If you encounter any problems with the plugin you should check your website php version.
+
+=== Thanks for the Support ===
+
+The support from the users that love SCHEMA for Article is huge. You can support SCHEMA for Article future development and help to make it even better by donating or even giving a 5 star rating with a nice message to me :)
+
+[Donate to SCHEMA for Article](https://www.paypal.me/yasglobal)
+
+=== Bug reports ===
+
+Bug reports for SCHEMA for Article are [welcomed on GitHub](https://github.com/yasglobal/schema-for-article). Please note GitHub is not a support forum, and issues that aren't properly qualified as bugs will be closed.
 
 == Installation ==
 
-The easiest way to install the plugin is to use the WP built-in menu for finding and installing new plugins directly from the WordPress repositories.
+=== From within WordPress ===
 
-If you need to install this using FTP or SFTP, you should follow these steps:
+1. Visit 'Plugins > Add New'
+1. Search for SCHEMA for Article
+1. Activate SCHEMA for Article from your Plugins page.
+1. Go to "after activation" below.
 
-1. Upload `json-ld-article.php` to the `/wp-content/plugins/` directory using your favorite FTP client.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. That's it.
+=== Manually ===
 
+1. Upload the `schema-for-article` folder to the `/wp-content/plugins/` directory
+1. Activate SCHEMA for Article through the 'Plugins' menu in WordPress
+1. Go to "after activation" below.
 
-**Compatibility.** This version requires php 5.4 for some options of json_encode. If you encounter any problems with the plugin you should check your web hotel's php version.
+=== After activation ===
+
+1. Go to the plugin settings page and set up the plugin for your site.
+1. You're done!
 
 == Frequently Asked Questions ==
 
@@ -46,18 +67,25 @@ If you need to install this using FTP or SFTP, you should follow these steps:
 
 == Changelog ==
 
+= 0.3.2 =
+
+  * Enhancements
+    * Added translation Capability
+    * Fixed PHP Notice on 404 Page
+    * Fixed plugin_loaded issue
+
 = 0.3.1 =
 
-* Add Compatibility with Make Paths Relative Plugin
+  * Add Compatibility with Make Paths Relative Plugin
 
 = 0.3 =
 
-* Optimized the Queries and made the SCHEMA more flexible.
+  * Optimized the Queries and made the SCHEMA more flexible.
 
 = 0.2 =
 
-* Fixed Featured Image bug and add functionality to change the SCHEMA type.
+  * Fixed Featured Image bug and add functionality to change the SCHEMA type.
 
 = 0.1 =
 
-* This is a fully functional version based on the idea of minimum viable product.
+  * This is a fully functional version based on the idea of minimum viable product.
