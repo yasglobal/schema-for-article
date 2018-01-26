@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/yasglobal
 Tags: json-ld, markup, schema, rich snippets, structured data, SEO, schema.org, schema markup, JSON, google validated
 Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 0.3.2
+Stable tag: 0.3.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires PHP: 5.2
@@ -68,6 +68,10 @@ A. We cannot promise it - but installing this plugin is in any case a step in ri
 A. Yes, Incase the fearuted image is not provided by the author so, the defualt provided image would be use to validate the google structure data.
 
 == Changelog ==
+
+= 0.3.3
+
+  * Update Translation PATH and fixed spelling typos
 
 = 0.3.2 =
 

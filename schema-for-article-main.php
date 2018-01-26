@@ -15,7 +15,7 @@ if ( ! function_exists( 'add_action' ) || ! function_exists( 'add_filter' ) ) {
 	exit();
 }
 
-define( 'SCHEMA_FOR_ARTICLE_PLUGIN_VERSION', '0.3.2' );
+define( 'SCHEMA_FOR_ARTICLE_PLUGIN_VERSION', '0.3.3' );
 
 if ( ! defined( 'SCHEMA_FOR_ARTICLE_PATH' ) ) {
 	define( 'SCHEMA_FOR_ARTICLE_PATH', plugin_dir_path( SCHEMA_FOR_ARTICLE_FILE ) );
@@ -53,6 +53,7 @@ function schema_article_plugin_textdomain() {
 		new Schema_For_Article_Admin_Options();
 	}
 
-	load_plugin_textdomain( 'schema-for-article', FALSE, SCHEMA_FOR_ARTICLE_BASENAME . '/languages/' );
+	load_plugin_textdomain( 'schema-for-article', FALSE,
+		basename( dirname( SCHEMA_FOR_ARTICLE_FILE ) ) . '/languages/' );
 }
 add_action( 'plugins_loaded', 'schema_article_plugin_textdomain' );

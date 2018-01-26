@@ -75,14 +75,25 @@ class Schema_For_Article_Admin {
 	}
 
 	/**
-	 * Plugin Settings Page Link on the Plugin Page under the Plugin Name.
+	 * Add About, Contact and Settings Link on the Plugin Page under
+	 * the Plugin Name.
 	 */
 	public function settings_link( $links ) {
+		$about = sprintf(
+			__( '<a href="%s" title="About">About</a>', 'schema-for-article' ),
+			'admin.php?page=schema-article-about-plugins'
+		);
+		$contact = sprintf(
+			__( '<a href="%s" title="Contact" target="_blank">Contact</a>', 'schema-for-article' ),
+			'https://www.yasglobal.com/#request-form'
+		);
 		$settings_link = sprintf(
 			__( '<a href="%s" title="Settings">Settings</a>', 'schema-for-article' ),
 			'admin.php?page=schema-article-settings'
 		);
 		array_unshift( $links, $settings_link );
+		array_unshift( $links, $contact );
+		array_unshift( $links, $about );
 		return $links;
 	}
 }

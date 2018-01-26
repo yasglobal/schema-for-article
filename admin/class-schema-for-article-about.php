@@ -60,7 +60,7 @@ class Schema_For_Article_About {
 
 			<div class="product">
 				<h2><?php _e( 'More from YAS Global', 'schema-for-article' ); ?></h2>
-				<span><?php _e('Our List of Plugins provides the services which helps you to manage your site URLs(Permalinks), Prevent your site from XSS Attacks, Brute force attacks, increase your site visitors by adding Strucutred JSON Markup and so on.', 'schema-for-article' ); ?></span>
+				<span><?php _e('Our List of Plugins provides the services which helps you to manage your site URLs(Permalinks), Prevent your site from XSS Attacks, Brute force attacks, increase your site visitors by adding Structured JSON Markup and so on.', 'schema-for-article' ); ?></span>
 				<div class="box">
 					<div class="img">
 						<img src= "<?php echo $img_src; ?>/custom-permalinks.svg" />
@@ -68,7 +68,7 @@ class Schema_For_Article_About {
 
 					<h3><?php _e( 'Custom Permalinks', 'schema-for-article' ); ?></h3>
 					<p><?php _e( 'Custom Permalinks helps you to make your permalinks customized for <em>individual</em> posts, pages, tags or categories. It will <strong>NOT</strong> apply whole permalink structures, or automatically apply a category\'s custom permalink to the posts within that category.', 'schema-for-article' ); ?></p>
-					<a href="https://wordpress.org/plugins/custom-permalinks/" class="checkout-button" target="_blank"><?php echo $button_text; ?></a>
+					<a href="https://www.custompermalinks.com/" class="checkout-button" target="_blank"><?php echo $button_text; ?></a>
 				</div>
 
 				<div class="box">
@@ -76,7 +76,7 @@ class Schema_For_Article_About {
 						<img src= "<?php echo $img_src; ?>/permalinks-customizer.svg" />
 					</div>
 
-					<h3><?php _e( 'Permalink Customizer', 'schema-for-article' ); ?></h3>
+					<h3><?php _e( 'Permalinks Customizer', 'schema-for-article' ); ?></h3>
 					<p><?php _e( 'Allows you to either define different Permalink Structure or define same Permalink Structure for default and Custom PostTypes, Taxonomies. Plugin automatically creates the user-friendly URLs as per your defined structured that can be edited from the single post/page.', 'schema-for-article' ); ?></p>
 					<a href="https://wordpress.org/plugins/permalinks-customizer/" class="checkout-button" target="_blank"><?php echo $button_text; ?></a>
 				</div>
@@ -97,7 +97,7 @@ class Schema_For_Article_About {
 					</div>
 
 					<h3><?php _e( 'Make Paths Relative', 'schema-for-article' ); ?></h3>
-					<p><?php _e( 'Convert the paths(URLs) to relative instead of absolute. You can make <strong>Post</strong>, <strong>Category</strong>, <strong>Archive</strong>, <strong>Image</strong> URLs and <strong>Script</strong> and <strong>Style</strong> src as per your requirement. You can choose which you want to be relative from the setttings Page.', 'schema-for-article' ); ?></p>
+					<p><?php _e( 'Convert the paths(URLs) to relative instead of absolute. You can make <strong>Post</strong>, <strong>Category</strong>, <strong>Archive</strong>, <strong>Image</strong> URLs and <strong>Script</strong> and <strong>Style</strong> src as per your requirement. You can choose which you want to be relative from the settings Page.', 'schema-for-article' ); ?></p>
 					<a href="https://wordpress.org/plugins/make-paths-relative/" class="checkout-button" target="_blank"><?php echo $button_text; ?></a>
 				</div>
 
@@ -106,7 +106,7 @@ class Schema_For_Article_About {
 						<img src= "<?php echo $img_src; ?>/http-auth.svg" />
 					</div>
 
-					<h3><?php _e( 'Http Auth', 'schema-for-article' ); ?></h3>
+					<h3><?php _e( 'HTTP Auth', 'schema-for-article' ); ?></h3>
 					<p><?php _e( 'Allows you apply <strong>HTTP Auth</strong> on your site. You can apply Http Authentication all over the site or only the admin pages. It helps to stop cralwing on your site while on development or persist the <strong>Brute Attacks</strong> by locking the Admin Pages.', 'schema-for-article' ); ?></p>
 					<a href="https://wordpress.org/plugins/http-auth/" class="checkout-button" target="_blank"><?php echo $button_text; ?></a>
 				</div>
