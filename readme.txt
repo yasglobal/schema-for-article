@@ -1,4 +1,4 @@
-﻿=== SCHEMA for Article ===
+=== SCHEMA for Article ===
 Contributors: sasiddiqui, aliya-yasir
 Donate link: https://www.paypal.me/yasglobal
 Tags: json-ld, markup, schema, rich snippets, structured data, SEO, schema.org, schema markup, JSON, google validated
@@ -69,7 +69,11 @@ A. Yes, Incase the fearuted image is not provided by the author so, the defualt 
 
 == Changelog ==
 
-= 0.3.3
+= 0.4 =
+  * Enhancement
+    * Added filter to exclude schema from PostTypes
+
+= 0.3.3 =
 
   * Update Translation PATH and fixed spelling typos
 

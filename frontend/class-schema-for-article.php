@@ -20,6 +20,15 @@ class Schema_For_Article {
 		if ( ! $post ) {
 			return;
 		}
+    // Filter to excluding PostTypes to be worked on by the plugin
+    $exclude_post_types = $post->post_type;
+    $excluded           = apply_filters(
+      'schema_for_article_exclude_post_type', $exclude_post_types
+    );
+    if ( '__true' === $excluded ) {
+      return;
+    }
+
 		$get_settings = unserialize( get_option( 'schema_for_article_settings') );
 		if ( isset( $get_settings ) && ! empty( $get_settings )
 			&& $get_settings['activate'] == "on" ) {
