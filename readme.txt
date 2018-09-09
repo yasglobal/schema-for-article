@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/yasglobal
 Tags: json-ld, markup, schema, rich snippets, structured data, SEO, schema.org, schema markup, JSON, google validated
 Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 0.3.3
+Stable tag: 0.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires PHP: 5.2
@@ -23,6 +23,22 @@ This plugin helps:
 
 === Compatibility ===
 This version requires php 5.4 for some options of json_encode. If you encounter any problems with the plugin you should check your website php version.
+
+
+=== Filter ===
+
+==== Exclude PostType from the Plugin ====
+
+To exclude the plugin to be worked on any PostType. Add this filter in your themes functions.php.
+`
+function yasglobal_exclude_post_types( $post_type ) {
+  if ( $post_type == 'post' ) {
+    return '__false';
+  }
+  return '__true';
+}
+add_filter( 'schema_for_article_exclude_post_type', 'yasglobal_exclude_post_types');
+`
 
 === Thanks for the Support ===
 
@@ -69,15 +85,16 @@ A. Yes, Incase the fearuted image is not provided by the author so, the defualt 
 
 == Changelog ==
 
-= 0.4 =
+= 0.4 - Sept 10, 2018 =
   * Enhancement
     * Added filter to exclude schema from PostTypes
+    * Added Privacy Policy content for Admin
 
-= 0.3.3 =
+= 0.3.3 - Jan 26, 2018 =
 
   * Update Translation PATH and fixed spelling typos
 
-= 0.3.2 =
+= 0.3.2 - Jan 19, 2018 =
 
   * Enhancements
     * Added translation Capability

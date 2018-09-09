@@ -13,6 +13,22 @@ This plugin helps:
 ### Compatibility
 This version requires php 5.4 for some options of json_encode. If you encounter any problems with the plugin you should check your web hotel's php version.
 
+## Filters
+
+### Exclude PostType from the Plugin
+
+To exclude the plugin to be worked on any PostType. Add this filter in your themes functions.php.
+
+```
+function yasglobal_exclude_post_types( $post_type ) {
+  if ( $post_type == 'post' ) {
+    return '__false';
+  }
+  return '__true';
+}
+add_filter( 'schema_for_article_exclude_post_type', 'yasglobal_exclude_post_types');
+```
+
 ### Thanks for the Support
 
 The support from the users that love SCHEMA for Article is huge. You can support SCHEMA for Article future development and help to make it even better by donating or even giving a 5 star rating with a nice message to me :)

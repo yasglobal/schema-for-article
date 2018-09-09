@@ -13,6 +13,7 @@ class Schema_For_Article_Admin {
 		add_filter( 'plugin_action_links_' . SCHEMA_FOR_ARTICLE_BASENAME,
 			array( $this, 'settings_link' )
 		);
+    add_action( 'admin_init', array( $this, 'add_privacy_policy' ) );
 	}
 
 	/**
@@ -76,7 +77,7 @@ class Schema_For_Article_Admin {
 
 	/**
 	 * Add About, Contact and Settings Link on the Plugin Page under
-	 * the Plugin Name.
+	 * the Plugin Name. 
 	 */
 	public function settings_link( $links ) {
 		$about = sprintf(
@@ -96,4 +97,29 @@ class Schema_For_Article_Admin {
 		array_unshift( $links, $about );
 		return $links;
 	}
+
+ /**
+   * Add Privacy Policy about the Plugin.
+   *
+   * @access public
+   * @since 0.4
+   *
+   * @return void
+   */
+  public function add_privacy_policy() {
+    if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+      return;
+    }
+     $content = sprintf(
+      __( 'This plugin doesn\'t collects/store any user related information.
+       To have any kind of further query please feel free to
+      <a href="%s" target="_blank">contact us</a>.',
+      'schema-for-article' ),
+      'https://www.yasglobal.com/#request-form'
+    );
+     wp_add_privacy_policy_content(
+      'SCHEMA For Article',
+      wp_kses_post( wpautop( $content, false ) )
+    );
+  }
 }
