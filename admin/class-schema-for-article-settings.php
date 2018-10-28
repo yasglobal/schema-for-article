@@ -16,7 +16,7 @@ class Schema_For_Article_Settings {
 	 * Schema Settings
 	 */
 	private function schema_settings() {
-		if( isset( $_POST['submit'] ) ) {
+		if ( isset( $_POST['submit'] ) ) {
 			$activate_schema = '';
 			if ( isset( $_POST['schema_article_activate'] ) ) {
 				$activate_schema = $_POST['schema_article_activate'];
@@ -42,18 +42,18 @@ class Schema_For_Article_Settings {
 			$schema_logo      = $get_settings['logo'];
 			$article_checked  = 'selected="selected"';
 			$news_checked     = '';
-			if ( $schema_type != '' && $schema_type == 'NewsArticle' ) {
+			if ( '' != $schema_type && 'NewsArticle' == $schema_type ) {
 				$article_checked = '';
 				$news_checked    = 'selected="selected"';
 			}
 			if ( empty( $schema_name ) ) {
 				$schema_name = get_bloginfo( 'name' );
 			}
-			if ( $schema_activated == 'on' ) {
+			if ( 'on' == $schema_activated ) {
 				$schema_activated_checked = 'checked';
 			}
 		} else {
-			$schema_name = get_bloginfo( 'name' );
+			$schema_name  = get_bloginfo( 'name' );
 			$schema_image = $schema_logo = '';
 		}
 		wp_enqueue_style( 'style', plugins_url( '/admin/css/admin-style.min.css', SCHEMA_FOR_ARTICLE_FILE ) );
@@ -87,7 +87,7 @@ class Schema_For_Article_Settings {
 						</tr>
 						<tr>
 							<th><?php _e( 'description', 'schema-for-article' ); ?> :</th>
-							<td><small><?php _e( 'Default', 'schema-for-article' ); ?> : post_excerpt</small></td>
+							<td><small><?php _e( 'Default', 'schema-for-article' ); ?> : Meta Description if found otherwise post_excerpt is used</small></td>
 						</tr>
 				</table>
 

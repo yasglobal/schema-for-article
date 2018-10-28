@@ -31,7 +31,7 @@ class Schema_For_Article {
 
 		$get_settings = unserialize( get_option( 'schema_for_article_settings') );
 		if ( isset( $get_settings ) && ! empty( $get_settings )
-			&& $get_settings['activate'] == "on" ) {
+			&& 'on' == $get_settings['activate'] ) {
 			$schema_name  = $get_settings['org_name'];
 			$schema_type  = $get_settings['type'];
 			$schema_logo  = $get_settings['logo'];
@@ -46,11 +46,17 @@ class Schema_For_Article {
 				$schema_type = "Article";
 			}
 			$headline = $this->escape_text_tags( $post->post_title );
-			$content  = $this->escape_text_tags( $post->post_excerpt );
-			if ( $content === '' ) {
-				$content = $this->escape_text_tags( $post->post_content );
-				$content = mb_substr( $content, 0, 110 );
-			}
+      $content  = $this->escape_text_tags(
+        get_post_meta( $post->ID, '_yoast_wpseo_metadesc', true )
+      );
+      if ( '' === $content ) {
+        $content  = $this->escape_text_tags( $post->post_excerpt );
+        if ( '' === $content ) {
+          $content = $this->escape_text_tags( $post->post_content );
+          $content = mb_substr( $content, 0, 110 );
+        }
+      }
+
 			$schema_post_id = site_url() . str_replace(
 				site_url(), '', get_permalink( $post->ID )
 			);

@@ -3,7 +3,7 @@
  * Plugin Name: SCHEMA for Article
  * Plugin URI: https://wordpress.org/plugins/schema-for-article/
  * Description: SCHEMA for Article is simply the easiest solution to add valid schema.org as a JSON script in the head of blog posts or posts. The provided LD-JSON is validated from the google structured data.
- * Version: 0.4
+ * Version: 0.4.1
  * Author: YAS Global Team
  * Author URI: https://www.yasglobal.com/web-design-development/wordpress/schema-article/
  * Donate link: https://www.paypal.me/yasglobal

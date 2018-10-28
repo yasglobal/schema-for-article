@@ -34,6 +34,6 @@ class Schema_For_Article_Admin_Options {
 			delete_option( 'schema_article_org_name' );
 			delete_option( 'schema_article_logo' );
 		}
-		update_option( 'schema_for_article_plugin_version', '0.3.3' );
+		update_option( 'schema_for_article_plugin_version', '0.4.1' );
 	}
 }

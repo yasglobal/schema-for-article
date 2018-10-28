@@ -15,7 +15,7 @@ if ( ! function_exists( 'add_action' ) || ! function_exists( 'add_filter' ) ) {
 	exit();
 }
 
-define( 'SCHEMA_FOR_ARTICLE_PLUGIN_VERSION', '0.4' );
+define( 'SCHEMA_FOR_ARTICLE_PLUGIN_VERSION', '0.4.1' );
 
 if ( ! defined( 'SCHEMA_FOR_ARTICLE_PATH' ) ) {
 	define( 'SCHEMA_FOR_ARTICLE_PATH', plugin_dir_path( SCHEMA_FOR_ARTICLE_FILE ) );

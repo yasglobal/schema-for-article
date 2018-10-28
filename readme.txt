@@ -3,8 +3,8 @@ Contributors: sasiddiqui, aliya-yasir
 Donate link: https://www.paypal.me/yasglobal
 Tags: json-ld, markup, schema, rich snippets, structured data, SEO, schema.org, schema markup, JSON, google validated
 Requires at least: 4.0
-Tested up to: 4.9
-Stable tag: 0.4
+Tested up to: 5.0
+Stable tag: 0.4.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires PHP: 5.2
@@ -42,9 +42,7 @@ add_filter( 'schema_for_article_exclude_post_type', 'yasglobal_exclude_post_type
 
 === Thanks for the Support ===
 
-The support from the users that love SCHEMA for Article is huge. You can support SCHEMA for Article future development and help to make it even better by donating or even giving a 5 star rating with a nice message to me :)
-
-[Donate to SCHEMA for Article](https://www.paypal.me/yasglobal)
+The support from the users that love SCHEMA for Article is huge. You can support SCHEMA for Article future development and help to make it even better by giving a 5 star rating with a nice message to me :)
 
 === Bug reports ===
 
@@ -84,6 +82,10 @@ A. We cannot promise it - but installing this plugin is in any case a step in ri
 A. Yes, Incase the fearuted image is not provided by the author so, the defualt provided image would be use to validate the google structure data.
 
 == Changelog ==
+
+= 0.4.1 - Oct 28, 2018 =
+  * Enhancement
+    * Use Meta Description of Yoast if available otherwise post_excerpt is used
 
 = 0.4 - Sept 10, 2018 =
   * Enhancement
