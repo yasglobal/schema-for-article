@@ -13,7 +13,7 @@ SCHEMA for Article is simply the easiest solution to add valid schema.org as a J
 
 == Description ==
 
-Search engines such as Google are using structured data markup in many ways—for example, to create rich snippets in search results. Search results with rich snippets will improve your click through rates and increase the number of visitors on your website.
+Search engines such as Google are using structured data markup in many ways—for example, to create rich snippets in search results. Search results with rich snippets will improve your click-through rates and increase the number of visitors on your website.
 
 This plugin helps:
 
@@ -22,7 +22,7 @@ This plugin helps:
 * Is simple to install: plug-and-play, no need to configure anything.
 
 === Compatibility ===
-This version requires php 5.4 for some options of json_encode. If you encounter any problems with the plugin you should check your website php version.
+This version requires PHP 5.4 for some options of json_encode. If you encounter any problems with the plugin you should check your website PHP version.
 
 
 === Filter ===
@@ -42,7 +42,7 @@ add_filter( 'schema_for_article_exclude_post_type', 'yasglobal_exclude_post_type
 
 === Thanks for the Support ===
 
-The support from the users that love SCHEMA for Article is huge. You can support SCHEMA for Article future development and help to make it even better by giving a 5 star rating with a nice message to me :)
+The support from the users that love SCHEMA for Article is huge. You can support SCHEMA for Article future development and help to make it even better by giving a 5-star rating with a nice message to me :)
 
 === Bug reports ===
 
@@ -76,10 +76,10 @@ This process defines you the steps to follow either you are installing through W
 A. Installing this plugin is the easiest way to add structured data to your blog. The plugin automatically creates the JSON-LD according to Google's specification.
 
 = Q. Does this plugin improve my SEO rankings? =
-A. We cannot promise it - but installing this plugin is in any case a step in right direction.
+A. We cannot promise it - but installing this plugin is, in any case, a step in the right direction.
 
 = Q. Does image necessarily to be provided to activate the plugin? =
-A. Yes, Incase the fearuted image is not provided by the author so, the defualt provided image would be use to validate the google structure data.
+A. Yes, In case the featured image is not provided by the author so, the default provided image would be used to validate the google structure data.
 
 == Changelog ==
 
@@ -117,4 +117,4 @@ A. Yes, Incase the fearuted image is not provided by the author so, the defualt 
 
 = 0.1 =
 
-  * This is a fully functional version based on the idea of minimum viable product.
+  * This is a fully functional version based on the idea of a minimum viable product.
